@@ -2,7 +2,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { fetchItems, deleteItem, saveItem } from '../../lib/data-store';
+// import { fetchItems, deleteItem, saveItem } from '../../lib/data-store';
+import { fetchItems, deleteItem, saveItem } from '../../lib/local-store';
+import Link from 'next/link';
+
 import { subscribeToDataChanges } from '../../lib/event-emitter';
 import Sidebar from '../../components/Sidebar';
 import ItemCard from '../../components/ItemCard';
@@ -108,6 +111,10 @@ export default function DashboardPage() {
     <div className="app-container">
       <header className="app-header">
         <h1>WorkflowCapture</h1>
+        <Link href="/settings" className="settings-link">
+          Settings
+        </Link>
+
         <div className="filter-controls">
           <div className="filter-buttons">
             <button

@@ -2,7 +2,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { fetchAllTags, fetchGtdCounts } from '../lib/data-store';
+// import { fetchAllTags, fetchGtdCounts } from '../lib/data-store';
+import { fetchAllTags, fetchGtdCounts } from '../lib/local-store';
+
 import { subscribeToDataChanges } from '../lib/event-emitter';
 import { GtdCounts } from '../lib/types';
 
